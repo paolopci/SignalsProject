@@ -7,7 +7,7 @@ import { Component, inject, ChangeDetectorRef, ChangeDetectionStrategy } from '@
   imports: [],
   templateUrl: './app1.component.html',
   styleUrl: './app1.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush // Optional, for performance optimization
+  changeDetection: ChangeDetectionStrategy.Default // Optional, for performance optimization
 })
 export class App1Component {
   title = 'Paolo Paci';
@@ -17,6 +17,11 @@ export class App1Component {
   doNothing() { }
 
 
+  calculateValue() {
+    console.log('calculateValue called');
+    return 42;
+  }
+
 
   constructor() {
     setInterval(() => {
@@ -24,9 +29,9 @@ export class App1Component {
       console.log('Counter:', this.counter);
     }, 1000);
 
-    setInterval(() => {
-      this.changeDetector.detectChanges();
-    }, 5000);
+    // setInterval(() => {
+    //   this.changeDetector.detectChanges();
+    // }, 5000);
 
 
   }
