@@ -7,7 +7,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   imports: [],
   templateUrl: './app1.component.html',
   styleUrl: './app1.component.scss',
-  //changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App1Component {
   title = 'Paolo Paci';
@@ -17,6 +17,7 @@ export class App1Component {
   constructor() {
     setInterval(() => {
       this.counter++;
+      console.log('Counter:', this.counter);
     }, 1000);
   }
 
