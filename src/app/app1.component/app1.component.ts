@@ -7,7 +7,7 @@ import { Component, inject, ChangeDetectorRef, ChangeDetectionStrategy } from '@
   imports: [],
   templateUrl: './app1.component.html',
   styleUrl: './app1.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default // Optional, for performance optimization
+  changeDetection: ChangeDetectionStrategy.OnPush // Optional, for performance optimization
 })
 export class App1Component {
   title = 'Paolo Paci';
