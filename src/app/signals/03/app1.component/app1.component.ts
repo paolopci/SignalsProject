@@ -29,7 +29,7 @@ export class App01Component {
 
 
   setSignal() {
-    this.firstSignal.set(100);
+    this.firstSignal.set(10);
   }
 
   updateSignal() {
