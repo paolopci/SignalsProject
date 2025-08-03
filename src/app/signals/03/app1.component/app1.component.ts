@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { mysignal } from './my-signal';
+import { mySignal } from './my-signal';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
 })
 export class App01Component {
 
-  readonly firstSignal = signal(42);
-  readonly secondSignal = signal('Hello, Signals!');
+  // readonly firstSignal = signal(42);
+  // readonly secondSignal = signal('Hello, Signals!');
 
 
-  // readonly firstSignal = mysignal(42);
-  // readonly secondSignal = mysignal('Hello, Signals!');
+  readonly firstSignal = mySignal(42);
+  readonly secondSignal = mySignal('Hello, Signals!');
 
   constructor() {
     // You can use signals in the constructor or methods
